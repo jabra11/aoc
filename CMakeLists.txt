@@ -29,7 +29,7 @@ target_link_libraries(AOC
                     )
 
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-    target_compile_options(AOC PUBLIC -include-pch /home/joerg/dev/a/AOC/build/Debug/stdc++.h.pch)
+    target_compile_options(AOC PUBLIC -include-pch ${CMAKE_SOURCE_DIR}/build/Debug/stdc++.h.pch)
 else ()
-    target_compile_options(AOC PUBLIC -include-pch /home/joerg/dev/a/AOC/build/Release/stdc++.h.pch)
+    target_compile_options(AOC PUBLIC -include-pch ${CMAKE_SOURCE_DIR}/build/Release/stdc++.h.pch)
 endif()
