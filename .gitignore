@@ -2,5 +2,4 @@
 .vimsetup
 build
 compile_commands.json
-gen_pch.sh
 .clangd
