@@ -29,7 +29,5 @@ target_link_libraries(AOC
                     )
 
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-    target_compile_options(AOC PUBLIC -include-pch ${CMAKE_SOURCE_DIR}/build/Debug/stdc++.h.pch)
-else ()
-    target_compile_options(AOC PUBLIC -include-pch ${CMAKE_SOURCE_DIR}/build/Release/stdc++.h.pch)
+    target_precompile_headers(AOC PUBLIC /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/stdc++.h)
 endif()

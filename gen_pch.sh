@@ -1,1 +1,0 @@
-clang++ -std=c++20 -fsanitize=address -emit-pch /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/stdc++.h -o build/Debug/stdc++.h.pch | clang++ -std=c++20 -O3 -emit-pch /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/stdc++.h -o build/Release/stdc++.h.pch
