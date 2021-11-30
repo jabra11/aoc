@@ -1,1 +1,1 @@
-main = do print 5
+main = do print "hello"

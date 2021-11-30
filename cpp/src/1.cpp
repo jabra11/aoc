@@ -7,7 +7,6 @@ using u64 = std::uint64_t;
 std::vector<std::string> get_input()
 {
     auto file = std::ifstream("../etc/data.txt");
-
     auto res = std::vector<std::string>();
 
     std::string tmp;
@@ -20,4 +19,5 @@ std::vector<std::string> get_input()
 
 int main()
 {
+    std::cout << "hello\n";
 }

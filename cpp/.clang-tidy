@@ -1,0 +1,17 @@
+Checks: "
+-*,
+cppcoreguidelines-*,
+clang-analyzer-*,
+cert-*,
+bugprone-*,
+hicpp-*,
+performance-*,
+modernize-*,
+portability-*,
+-modernize-use-trailing-return-type,
+-hicpp-braces-around-statements,
+-hicpp-uppercase-literal-suffix,
+-modernize-use-nodiscard,
+-cppcoreguidelines-avoid-magic-numbers,
+-cppcoreguidelines-pro-bounds-constant-array-index,
+"

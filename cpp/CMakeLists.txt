@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
-project(AOC)
+project(aoc)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(src
@@ -21,13 +22,13 @@ set(src
 find_package(benchmark REQUIRED)
 find_package(fmt REQUIRED)
 
-add_executable(AOC ${src})
+add_executable(aoc ${src})
 
-target_link_libraries(AOC
+target_link_libraries(aoc
                     benchmark::benchmark
                     fmt::fmt
                     )
 
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-    target_precompile_headers(AOC PUBLIC /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/stdc++.h)
+    target_precompile_headers(aoc PUBLIC /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/stdc++.h)
 endif()
