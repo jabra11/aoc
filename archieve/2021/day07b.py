@@ -6,6 +6,8 @@ avg = sum(pos)/len(pos)
 s_low=0
 s_high=0
 
+print(avg)
+
 for i in pos:
     dif = abs(int(avg)-i)
     s_low += dif*(dif+1)/2
