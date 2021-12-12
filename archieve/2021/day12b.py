@@ -16,13 +16,14 @@ for (a,b) in paths:
 
 all_paths = []
 
-def find_paths(cur_p, end, visited):
+def find_paths(cur_p, end, visited, ctr):
     cur = cur_p[len(cur_p)-1]
     if cur == end:
         all_paths.append(cur_p)
         return
     else:
         for next in (g[cur]):
+            ctr2=ctr
             if not (cur,next) in visited:
                 visited[(cur,next)] = 0
 
@@ -37,26 +38,22 @@ def find_paths(cur_p, end, visited):
                 if cur.lower() == cur:
                     if (cur,cur) in tmp:
                         tmp[(cur,cur)]+=1
+                        ctr2+=1
+                        if ctr2 == 2:
+                            return
                     else:
                         tmp[(cur,cur)]=1
 
                     if tmp[(cur,cur)] >= 3:
                         return
 
-                dups=list()
-                for (a,b) in tmp.keys():
-                    if a==b:
-                        dups.append(tmp[(a,b)])
-                if dups.count(2) > 1:
-                    return
-
-                find_paths(cur_p.copy() + [next], end, tmp)
+                find_paths(cur_p.copy() + [next], end, tmp, ctr2)
 
 s = ['start']
 vis = dict()
 vis[(None,'start')] = 1
 
-find_paths(s, 'end', vis)
+find_paths(s, 'end', vis, 0)
 
 ctr=0
 for p in all_paths:
