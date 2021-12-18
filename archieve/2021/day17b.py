@@ -1,4 +1,5 @@
-data = open('etc/in').read().splitlines()[0].split(',')
+import sys; datafilepath = sys.argv[1]
+data = open(datafilepath).read().splitlines()[0].split(',')
 data[0] = data[0][15:].split('..')
 data[1] = data[1][3:].split('..')
 

@@ -1,4 +1,5 @@
-data = [x for x in open('etc/in').read().splitlines()]
+import sys; datafilepath = sys.argv[1]
+data = [x for x in open(datafilepath).read().splitlines()]
 rules = { x.split(' -> ')[0]: x.split(' -> ')[1] for x in data[2:] }
 pm = dict()
 for i in range(len(data[0])-1):

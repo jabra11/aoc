@@ -1,5 +1,6 @@
+import sys; datafilepath = sys.argv[1]
 data = [] 
-for i in open('etc/in').read().splitlines():
+for i in open(datafilepath).read().splitlines():
     data.append(i)
 
 gamma = ""

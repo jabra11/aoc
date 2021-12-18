@@ -1,4 +1,5 @@
-lines = open('etc/in').read().splitlines()
+import sys; datafilepath = sys.argv[1]
+lines = open(datafilepath).read().splitlines()
 
 pairs = {'(':')','<':'>','[':']','{':'}',
          ')':'(','>':'<',']':'[','}':'{'}

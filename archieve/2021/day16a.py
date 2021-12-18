@@ -1,4 +1,5 @@
-data = open('etc/in').read().splitlines()[0]
+import sys; datafilepath = sys.argv[1]
+data = open(datafilepath).read().splitlines()[0]
 xmis = ""
 for i in data:
     xmis += str(bin(int(i,16)))[2:].zfill(4)

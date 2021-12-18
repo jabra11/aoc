@@ -1,4 +1,5 @@
-data = [ x.split('|') for x in open('etc/in').read().splitlines() ]
+import sys; datafilepath = sys.argv[1]
+data = [ x.split('|') for x in open(datafilepath).read().splitlines() ]
 
 data2=list()
 for i in data:

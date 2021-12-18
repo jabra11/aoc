@@ -1,4 +1,5 @@
-hmap = [ list(x) for x in open('etc/in').read().splitlines() ]
+import sys; datafilepath = sys.argv[1]
+hmap = [ list(x) for x in open(datafilepath).read().splitlines() ]
 
 inf = 99
 

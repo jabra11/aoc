@@ -1,4 +1,5 @@
-paths = [ tuple(x.split('-')) for x in open('etc/in').read().splitlines() ]
+import sys; datafilepath = sys.argv[1]
+paths = [ tuple(x.split('-')) for x in open(datafilepath).read().splitlines() ]
 
 g = dict()
 

@@ -1,4 +1,5 @@
-pos = [ int(x) for x in open('etc/in').read().split(',') ]
+import sys; datafilepath = sys.argv[1]
+pos = [ int(x) for x in open(datafilepath).read().split(',') ]
 
 min = min(pos)
 max = max(pos)

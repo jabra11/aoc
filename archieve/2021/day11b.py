@@ -1,4 +1,5 @@
-grid = [ list(x) for x in open('etc/in').read().splitlines() ]
+import sys; datafilepath = sys.argv[1]
+grid = [ list(x) for x in open(datafilepath).read().splitlines() ]
 inf = 99999999999
 for i in range(len(grid)):
     grid[i] = [inf] + [int(x) for x in grid[i]] + [inf]

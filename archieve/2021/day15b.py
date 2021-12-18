@@ -1,4 +1,5 @@
-grid = [ list(map (int, x)) for x in open('etc/in').read().splitlines() ]
+import sys; datafilepath = sys.argv[1]
+grid = [ list(map (int, x)) for x in open(datafilepath).read().splitlines() ]
 
 for i in range(len(grid)):
     tmp = list()

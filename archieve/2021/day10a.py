@@ -1,4 +1,5 @@
-lines = open('etc/in').read().splitlines()
+import sys; datafilepath = sys.argv[1]
+lines = open(datafilepath).read().splitlines()
 
 points = {')':3, ']':57, '}':1197, '>':25137}
 

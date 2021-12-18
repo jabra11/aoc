@@ -1,4 +1,5 @@
-fishs = [int(x) for x in open('etc/in').read().split(',')]
+import sys; datafilepath = sys.argv[1]
+fishs = [int(x) for x in open(datafilepath).read().split(',')]
 
 for i in range(0,80):
     for j in range(len(fishs)):

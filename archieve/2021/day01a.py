@@ -1,4 +1,5 @@
-data = open('etc/in').read().splitlines()
+import sys; datafilepath = sys.argv[1]
+data = open(datafilepath).read().splitlines()
 
 ctr=0
 
