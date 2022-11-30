@@ -19,5 +19,5 @@ std::vector<std::string> get_input()
 
 int main()
 {
-    std::cout << "hello\n";
+    std::cout << "hello from cpp\n";
 }

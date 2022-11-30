@@ -30,5 +30,5 @@ target_link_libraries(aoc
                     )
 
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-    target_precompile_headers(aoc PUBLIC /usr/include/c++/11.1.0/x86_64-pc-linux-gnu/bits/stdc++.h)
+    target_precompile_headers(aoc PUBLIC /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/stdc++.h)
 endif()
