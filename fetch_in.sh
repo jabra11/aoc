@@ -1,4 +1,5 @@
 day=$@
+year="2022"
 
 if [[ "$day" == "" ]]
 then
@@ -7,7 +8,7 @@ then
 fi
 
 cookie=$AOCCOOK
-url="https://adventofcode.com/2022/day/$day/input"
+url="https://adventofcode.com/$year/day/$day/input"
 
 day_pretty=$(printf %02d $day)
 out="in/$day_pretty.txt"
@@ -26,7 +27,7 @@ else
     exit
 fi
 
-arch="archieve/2022/in/$day_pretty.txt"
+arch="archieve/$year/in/$day_pretty.txt"
 if [[ ! -f $arch ]]; then
     echo "copying to ${arch%$day_pretty.txt}"
     cp $out $arch
