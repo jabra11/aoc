@@ -1,5 +1,5 @@
 day=$@
-year="2022"
+year="2023"
 
 if [[ "$day" == "" ]]
 then
@@ -11,7 +11,7 @@ cookie=$AOCCOOK
 url="https://adventofcode.com/$year/day/$day/input"
 
 day_pretty=$(printf %02d $day)
-out="in/$day_pretty.txt"
+out="in/in.txt"
 
 cookie_censored=$(printf $cookie | cut -c1-8)'...'
 
